@@ -58,3 +58,18 @@ echo "</table>";
 ?>
 </html>
 ```
+## PROBLEM 4
+```php
+<!DOCTYPE html>
+<html>
+<head></head>
+<body></body>
+<?php
+  $nums = array();
+  for ($i=1; $i<=25; $i++)
+    array_push($nums, rand(1, 100);
+  echo "minimum: " . min($nums);
+  echo "maximum: " . max($nums);
+?>
+</html>
+```
