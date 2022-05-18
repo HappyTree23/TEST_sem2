@@ -1,5 +1,5 @@
 ## PROBLEM 1
-```php
+```html
 <!DOCTYPE html>
 <html>
 <head></head>
