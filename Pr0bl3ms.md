@@ -90,3 +90,24 @@ krsort($age);
 foreach($age as $person => $pers_age)
     echo $person . ": " . $pers_age . "<br>";
 ```
+
+## PROBLEM 7
+```php
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <form method="POST">
+        Name: <input type="text" name="pname">
+        Age: <input type="number" name="age">
+        <input type="submit">
+    </form>
+</body>
+<?php
+    if ($_POST)
+    {
+        echo "Hello, " . $_POST["pname"] . "! You are " . $_POST["age"] . " years old.";
+    }
+?>
+</html>
+```
