@@ -80,5 +80,13 @@ echo "</table>";
 $age = array("Peter"=>"35", "Michelle"=>"37", "Joe"=>"43", "Andrew"=>"25", "Bob"=>"33", "John"=>"53", "Paul"=>"22", "Bill"=>"17", "Anna"=>"43");
 asort($age);
 foreach($age as $person => $pers_age)
-    echo $person . ": " . $pers_age . "<br>;
+    echo $person . ": " . $pers_age . "<br>";
+```
+
+## PROBLEM 6
+```php
+$age = array("Peter"=>"35", "Michelle"=>"37", "Joe"=>"43", "Andrew"=>"25", "Bob"=>"33", "John"=>"53", "Paul"=>"22", "Bill"=>"17", "Anna"=>"43");
+krsort($age);
+foreach($age as $person => $pers_age)
+    echo $person . ": " . $pers_age . "<br>";
 ```
