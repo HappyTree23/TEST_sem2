@@ -1,4 +1,4 @@
-## PROBLEM 1
+## PROBLEM 1 -- Flexbox alignment
 ```html
 <!DOCTYPE html>
 <html>
@@ -20,36 +20,70 @@
 </html>
 ```
 
-## PROBLEM 2
+## PROBLEM 2 -- layout change
 ```php
 <!DOCTYPE html>
 <html>
 <head></head>
 <body>
   <form id="form1" action="" method="POST">
-    <input type="number" name="num1" class="num-fld">
-    <input type="number" name="num2" class="num-fld">
-    <input type="submit" value="Add" id="sub-btn">
+    <div id="frow">
+      <input type="number" name="num1" class="num-fld">
+      <div id="plus">+</div>
+    </div>
+    <div id="frow">
+      <input type="number" name="num2" class="num-fld">
+      <input type="submit" value="=" id="sub-btn">
+    </div>
+    <div id="line"> </div>
   </form>
 </body>
+  
 <?php
 if ($_POST) {
   $num1 = $_POST["num1"];
   $num2 = $_POST["num2"];
-  echo $num1 + $num2;
+  echo "<div id='number'>" . ($num1 + $num2) . "</div>";
 }
 ?>
+  
 <style>
+  body {
+    font-family: sans-serif;
+  }
   #form1 {
     display: flex;
     flex-direction: column;
+    align-content: flex-start;
   }
   .num-fld {
     width: 60px;
+    height: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+  }
+  
+  #frow {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #plus {
+    font-weight: bold;
+  }
+  #line {
+    margin: 2px;
+    border: thin solid black;
+    width: 76px;
   }
   #sub-btn {
-    position: relative;
-    top: 20px;
+    width: 20px;
+    height: auto;
+    
+  }
+  #number {
+    margin-left: 8px;
   }
 </style>
 </html>
