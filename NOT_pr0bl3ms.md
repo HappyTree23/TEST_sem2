@@ -89,7 +89,7 @@ if ($_POST) {
 </html>
 ```
 
-## PROBLEM 3
+## PROBLEM 3 -- Better table
 ```php
 <!DOCTYPE html>
 <html>
@@ -99,22 +99,34 @@ if ($_POST) {
   $nums = array();
   for ($i = 1; $i <= 5; $i++) {
     $line = array();
-    for ($j=1; $j<=5; $j++) {
+    for ($j=1; $j <= 5; $j++) {
       array_push($line, rand(1, 100));
     }
     array_push($nums, $line);
   }
 
   echo "<table id='table1'>";
-  for ($i = 1; $i<=5; $i++) {
+  for ($i = 0; $i<5; $i++) {
     echo "<tr>";
-    for ($j=1; $j<=5; $j++) {
+    for ($j=0; $j<5; $j++) {
       echo "<td>" . $nums[$i][$j] . "</td>";
     }
     echo "</tr>";
   }
 echo "</table>";
 ?>
+<style>
+  table {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  td {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+  }
+</style>
 </html>
 ```
 
