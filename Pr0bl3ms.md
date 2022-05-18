@@ -1,4 +1,4 @@
-## <!-- PROBLEM 1 -->
+## PROBLEM 1
 ```php
 <!DOCTYPE html>
 <html>
@@ -9,7 +9,7 @@
 </html>
 ```
 
-## <!-- PROBLEM 2 -->
+## PROBLEM 2
 ```php
 <!DOCTYPE html>
 <html>
@@ -27,5 +27,34 @@ if ($_POST) {
   $num2 = $_POST["num2"];
   echo $num1 + $num2;
 }
+</html>
+```
+
+## PROBLEM 3
+```php
+<!DOCTYPE html>
+<html>
+<head></head>
+<body></body>
+<?php
+  $nums = array();
+  for ($i = 1; $i <= 5; $i++) {
+    $line = array();
+    for ($j=1; $j<=5; $j++) {
+      array_push($line, rand(1, 100));
+    }
+    array_push($nums, $line);
+  }
+
+  echo "<table id='table1'>";
+  for ($i = 1; $i<=5; $i++) {
+    echo "<tr>";
+    for ($j=1; $j<=5; $j++) {
+      echo "<td>" . $nums[$i][$j] . "</td>";
+    }
+    echo "</tr>";
+  }
+echo "</table>";
+?>
 </html>
 ```
