@@ -27,6 +27,7 @@ if ($_POST) {
   $num2 = $_POST["num2"];
   echo $num1 + $num2;
 }
+?>
 </html>
 ```
 
@@ -68,9 +69,10 @@ echo "</table>";
 <?php
   $nums = array();
   for ($i=1; $i<=25; $i++)
-    array_push($nums, rand(1, 100);
-  echo "minimum: " . min($nums);
-  echo "maximum: " . max($nums);
+    array_push($nums, rand(1, 100));
+  echo "min: " . min($nums);
+  echo "<br>";
+  echo "max: " . max($nums);
 ?>
 </html>
 ```
